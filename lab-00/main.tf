@@ -13,7 +13,7 @@ data "aws_ami" "rhel" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0e12cbde3e77cbb98"
+  ami           = "ami-00103874"
   instance_type = "t2.micro"
   key_name = "Ansible"
   security_groups = [
