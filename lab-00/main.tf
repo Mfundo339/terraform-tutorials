@@ -3,8 +3,15 @@ variable "AWS_SECRET_KEY" {}
 
 provider "aws" {
   region = "eu-west-1"
-  access_key = "${var.AWS_ACCESS_KEY}"
-  secret_key = "${var.AWS_SECRET_KEY}"
+
+variable "aws_access_key" {
+   default = "AKIAIQJZ6IAOIWQTZIPA"
+   description = "the user aws access key"
+}
+variable "aws_secret_key" {
+    default = "4AsQFZyWHMSZzrtlX9cpQOMQawicikljGsoda+r6"
+    description = "the user aws secret key"
+  }
 }
 
 data "aws_ami" "rhel" {
@@ -24,6 +31,6 @@ resource "aws_instance" "web" {
     ]
 
   tags {
-    Name = "Test Server1"
+    Name = "rhel"
   }
 }
