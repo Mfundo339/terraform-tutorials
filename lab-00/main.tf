@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "eu-west-1"
-
 variable "aws_access_key" {
    default = "AKIAIQJZ6IAOIWQTZIPA"
    description = "the user aws access key"
@@ -9,6 +6,8 @@ variable "aws_secret_key" {
     default = "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"
     description = "the user aws secret key"
   }
+provider "aws" {
+  region = "eu-west-1"
 }
 
 data "aws_ami" "rhel" {
