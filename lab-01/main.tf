@@ -1,15 +1,15 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-1"
 
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-011b3ccf1bd6db744"
+  ami           = "ami-0e12cbde3e77cbb98"
   instance_type = "t2.micro"
   security_groups = [
-        "jenkins"
+        "default"
     ]
-  key_name = "jenkins"
+  key_name = "ansible"
   tags {
     Name = "rhel-jenkins"
   }
@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
     connection {
     type     = "ssh"
     user     = "ec2-user"
-    private_key  = "${file("~/jenkins.pem")}"
+    private_key  = "${file("~/ansible.pem")}"
   }
   }
   
