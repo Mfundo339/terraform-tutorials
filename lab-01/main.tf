@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
   security_groups = [
         "default"
     ]
-  key_name = "ansible"
+  key_name = "Ansible"
   tags {
     Name = "rhel-jenkins"
   }
