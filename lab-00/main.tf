@@ -1,6 +1,3 @@
-variable "AWS-access-KEY" {}
-variable "AWS_SECRET_KEY" {}
-
 provider "aws" {
   region = "eu-west-1"
 
