@@ -27,7 +27,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   key_name = "Ansible"
   security_groups = [
-        "default
+        "default"
     ]
 
   tags {
