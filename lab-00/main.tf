@@ -24,6 +24,6 @@ resource "aws_instance" "web" {
     ]
 
   tags {
-    Name = "rhel"
+    Name = "Test Server1"
   }
 }
